@@ -1,27 +1,17 @@
-:root {
+html {
+    background-color: #e2e8f0;
+}
+
+body {
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
     --accent-color: #3498db;
     --text-color: #333333;
     --light-text: #666666;
-    --page-bg: #e2e8f0;
     --paper-bg: #ffffff;
     --border-color: #cbd5e1;
     --font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
 
-html {
-    box-sizing: border-box;
-    background-color: var(--page-bg);
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-body {
     background-color: var(--paper-bg);
     color: var(--text-color);
     font-family: var(--font-family);
@@ -36,12 +26,17 @@ body {
     border-radius: 4px;
 }
 
-header {
+.cv-body,
+.cv-body * {
+    box-sizing: border-box;
+}
+
+.cv-header {
     text-align: center;
     margin-bottom: 25px;
 }
 
-header h1 {
+.cv-name {
     font-size: 2.8rem;
     margin: 0 0 5px;
     color: var(--primary-color);
@@ -49,13 +44,13 @@ header h1 {
     font-weight: 700;
 }
 
-header p {
+.cv-header-text {
     margin: 5px 0;
     color: var(--secondary-color);
     font-size: 1.05rem;
 }
 
-header ul {
+.cv-contact-list {
     list-style: none;
     padding: 0;
     margin: 15px 0 0;
@@ -66,37 +61,37 @@ header ul {
     flex-wrap: wrap;
 }
 
-header li {
+.cv-contact-item {
     font-size: 0.95rem;
     color: var(--light-text);
 }
 
-header a {
+.cv-link {
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
-header a:hover {
+.cv-link:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
 
-header hr {
+.cv-divider {
     margin-top: 25px;
     border: none;
     height: 1px;
     background-color: var(--border-color);
 }
 
-main {
+.cv-main {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-section h2 {
+.cv-section-title {
     font-size: 1.4rem;
     color: var(--primary-color);
     border-bottom: 2px solid var(--accent-color);
@@ -107,53 +102,53 @@ section h2 {
     letter-spacing: 1px;
 }
 
-section h3 {
+.cv-subheading {
     font-size: 1.15rem;
     color: var(--secondary-color);
     margin-top: 15px;
     margin-bottom: 8px;
 }
 
-section p {
+.cv-text {
     margin: 0 0 12px;
     text-align: justify;
 }
 
-section ul {
+.cv-list {
     margin: 0 0 15px;
     padding-left: 20px;
 }
 
-section li {
+.cv-list-item {
     margin-bottom: 6px;
 }
 
-article {
+.cv-project-item {
     margin-bottom: 20px;
 }
 
-article:last-child {
+.cv-project-item-last {
     margin-bottom: 0;
 }
 
-article h3 {
+.cv-project-title {
     margin-top: 0;
     margin-bottom: 6px;
     display: inline-block;
     color: var(--primary-color);
 }
 
-article p {
+.cv-project-text {
     margin-bottom: 10px;
     color: var(--text-color);
     font-size: 0.95rem;
 }
 
-article ul {
+.cv-list-tight {
     margin-bottom: 0;
 }
 
-strong {
+.cv-strong {
     font-weight: 600;
     color: var(--primary-color);
 }

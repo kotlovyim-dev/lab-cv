@@ -1,135 +1,200 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Maksym Kotlovyi — CV</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Maksym Kotlovyi — CV</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-    <header>
-        <h1>Maksym Kotlovyi</h1>
-        <p><strong>Junior Full-Stack Developer</strong> (Next.js / TypeScript, NestJS, FastAPI)</p>
-        <p>Lviv · English: B1 · Open to work / freelance / collaborations</p>
-
-        <h2>Contacts</h2>
-        <ul>
-            <li>Email: <a href="mailto:kotlovyim@gmail.com">kotlovyim@gmail.com</a></li>
-            <li>GitHub: <a href="https://github.com/kotlovyim-dev">github.com/kotlovyim-dev</a></li>
-            <li>Telegram: <a href="https://t.me/kotlovyim">@kotlovyim</a></li>
-        </ul>
-
-        <hr />
-    </header>
-
-    <main>
-        <section>
-            <h2>Profile</h2>
-            <p>
-                Junior Full-Stack developer focused on clean code, structured architecture, and fast iteration.
-                Interested in SaaS, AI tools, developer tooling, and EdTech.
+    <body>
+        <header class="cv-header">
+            <h1 class="cv-name">Maksym Kotlovyi</h1>
+            <p class="cv-header-text">
+                <strong class="cv-strong">Junior Full-Stack Developer</strong>
+                (Next.js / TypeScript, NestJS, FastAPI)
             </p>
-        </section>
+            <p class="cv-header-text">
+                Lviv · English: B1 · Open to work / freelance / collaborations
+            </p>
 
-        <section>
-            <h2>Achievements</h2>
-            <ul>
-                <li>
-                    Built an in-browser “Docker IDE” simulator without a backend: code editor, terminal, container
-                    yard visualization, and interactive learning scenarios.
+            <h2 class="cv-section-title">Contacts</h2>
+            <ul class="cv-contact-list">
+                <li class="cv-contact-item">
+                    Email:
+                    <a class="cv-link" href="mailto:kotlovyim@gmail.com"
+                        >kotlovyim@gmail.com</a
+                    >
                 </li>
-                <li>
-                    Implemented a “Figma → Code” tool as an MCP server: layout analysis, Tailwind class generation,
-                    and AI-ready structured Markdown output to speed up UI implementation.
+                <li class="cv-contact-item">
+                    GitHub:
+                    <a class="cv-link" href="https://github.com/kotlovyim-dev"
+                        >github.com/kotlovyim-dev</a
+                    >
                 </li>
-                <li>
-                    Applied a state/event-driven approach to UI behavior (e.g., state machines / event flows) to
-                    make complex interactions predictable and maintainable.
+                <li class="cv-contact-item">
+                    Telegram:
+                    <a class="cv-link" href="https://t.me/kotlovyim"
+                        >@kotlovyim</a
+                    >
                 </li>
             </ul>
-        </section>
 
-        <section>
-            <h2>Technical Skills</h2>
+            <hr class="cv-divider" />
+        </header>
 
-            <h3>Frontend</h3>
-            <ul>
-                <li>Next.js, React, TypeScript</li>
-                <li>Tailwind CSS, shadcn/ui</li>
-                <li>Component-driven UI, routing, forms, validation</li>
-            </ul>
-
-            <h3>Backend</h3>
-            <ul>
-                <li>NestJS</li>
-                <li>FastAPI</li>
-                <li>REST APIs, basic security principles (Cybersecurity track)</li>
-            </ul>
-
-            <h3>Dev Tools</h3>
-            <ul>
-                <li>Git/GitHub</li>
-                <li>Docker</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Projects (GitHub)</h2>
-
-            <article>
-                <h3>Docker Yard IDE Simulator</h3>
-                <p>
-                    In-browser Docker IDE simulator with no backend: Monaco editor, terminal, “container yard”,
-                    Dockerfile/compose diagnostics, and interactive learning flows.
+        <main class="cv-main">
+            <section class="cv-section">
+                <h2 class="cv-section-title">Profile</h2>
+                <p class="cv-text">
+                    Junior Full-Stack developer focused on clean code,
+                    structured architecture, and fast iteration. Interested in
+                    SaaS, AI tools, developer tooling, and EdTech.
                 </p>
-                <ul>
-                    <li><a href="https://github.com/kotlovyim-dev/docker-yard-ide-simulator">Repository</a></li>
-                    <li>Stack: Next.js, TypeScript, XState, Monaco Editor, xterm, Zod</li>
-                    <li>License: MIT</li>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="cv-section-title">Achievements</h2>
+                <ul class="cv-list">
+                    <li class="cv-list-item">
+                        Built an in-browser “Docker IDE” simulator without a
+                        backend: code editor, terminal, container yard
+                        visualization, and interactive learning scenarios.
+                    </li>
+                    <li class="cv-list-item">
+                        Implemented a “Figma → Code” tool as an MCP server:
+                        layout analysis, Tailwind class generation, and AI-ready
+                        structured Markdown output to speed up UI
+                        implementation.
+                    </li>
+                    <li class="cv-list-item">
+                        Applied a state/event-driven approach to UI behavior
+                        (e.g., state machines / event flows) to make complex
+                        interactions predictable and maintainable.
+                    </li>
                 </ul>
-            </article>
+            </section>
 
-            <article>
-                <h3>Figma to Code MCP Server</h3>
-                <p>
-                    MCP server that analyzes a Figma selection and generates implementation guidance:
-                    Tailwind classes, shadcn/ui suggestions, and structured Markdown for LLM assistants.
-                </p>
-                <ul>
-                    <li><a href="https://github.com/kotlovyim-dev/figma-to-code-mcp">Repository</a></li>
-                    <li>Node.js 20+</li>
+            <section class="cv-section">
+                <h2 class="cv-section-title">Technical Skills</h2>
+
+                <h3 class="cv-subheading">Frontend</h3>
+                <ul class="cv-list">
+                    <li class="cv-list-item">Next.js, React, TypeScript</li>
+                    <li class="cv-list-item">Tailwind CSS, shadcn/ui</li>
+                    <li class="cv-list-item">
+                        Component-driven UI, routing, forms, validation
+                    </li>
                 </ul>
-            </article>
 
-            <article>
-                <h3>CRM Workroom Frontend</h3>
-                <p>
-                    Frontend project using Next.js + React + TypeScript with Tailwind v4 and shadcn components.
-                </p>
-                <ul>
-                    <li><a href="https://github.com/kotlovyim-dev/crm-workroom-frontend">Repository</a></li>
-                    <li>Stack: Next.js 16, React 19, TypeScript, Tailwind</li>
+                <h3 class="cv-subheading">Backend</h3>
+                <ul class="cv-list">
+                    <li class="cv-list-item">NestJS</li>
+                    <li class="cv-list-item">FastAPI</li>
+                    <li class="cv-list-item">
+                        REST APIs, basic security principles (Cybersecurity
+                        track)
+                    </li>
                 </ul>
-            </article>
-        </section>
 
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Lviv Polytechnic National University</strong> — Cybersecurity</li>
-            </ul>
-        </section>
+                <h3 class="cv-subheading">Dev Tools</h3>
+                <ul class="cv-list">
+                    <li class="cv-list-item">Git/GitHub</li>
+                    <li class="cv-list-item">Docker</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Certificates</h2>
-            <ul>
-                <li><strong>freeCodeCamp</strong> — JavaScript Algorithms and Data Structures (Certificate)</li>
-                <li><strong>Udemy</strong> — JavaScript Complete Course (Certificate, 2025)</li>
-            </ul>
-        </section>
-    </main>
-</body>
+            <section class="cv-section">
+                <h2 class="cv-section-title">Projects (GitHub)</h2>
 
+                <article class="cv-project-item">
+                    <h3 class="cv-project-title">Docker Yard IDE Simulator</h3>
+                    <p class="cv-project-text">
+                        In-browser Docker IDE simulator with no backend: Monaco
+                        editor, terminal, “container yard”, Dockerfile/compose
+                        diagnostics, and interactive learning flows.
+                    </p>
+                    <ul class="cv-list cv-list-tight">
+                        <li class="cv-list-item">
+                            <a
+                                class="cv-link"
+                                href="https://github.com/kotlovyim-dev/docker-yard-ide-simulator"
+                                >Repository</a
+                            >
+                        </li>
+                        <li class="cv-list-item">
+                            Stack: Next.js, TypeScript, XState, Monaco Editor,
+                            xterm, Zod
+                        </li>
+                        <li class="cv-list-item">License: MIT</li>
+                    </ul>
+                </article>
+
+                <article class="cv-project-item">
+                    <h3 class="cv-project-title">Figma to Code MCP Server</h3>
+                    <p class="cv-project-text">
+                        MCP server that analyzes a Figma selection and generates
+                        implementation guidance: Tailwind classes, shadcn/ui
+                        suggestions, and structured Markdown for LLM assistants.
+                    </p>
+                    <ul class="cv-list cv-list-tight">
+                        <li class="cv-list-item">
+                            <a
+                                class="cv-link"
+                                href="https://github.com/kotlovyim-dev/figma-to-code-mcp"
+                                >Repository</a
+                            >
+                        </li>
+                        <li class="cv-list-item">Node.js 20+</li>
+                    </ul>
+                </article>
+
+                <article class="cv-project-item cv-project-item-last">
+                    <h3 class="cv-project-title">CRM Workroom Frontend</h3>
+                    <p class="cv-project-text">
+                        Frontend project using Next.js + React + TypeScript with
+                        Tailwind v4 and shadcn components.
+                    </p>
+                    <ul class="cv-list cv-list-tight">
+                        <li class="cv-list-item">
+                            <a
+                                class="cv-link"
+                                href="https://github.com/kotlovyim-dev/crm-workroom-frontend"
+                                >Repository</a
+                            >
+                        </li>
+                        <li class="cv-list-item">
+                            Stack: Next.js 16, React 19, TypeScript, Tailwind
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="cv-section-title">Education</h2>
+                <ul class="cv-list">
+                    <li class="cv-list-item">
+                        <strong class="cv-strong"
+                            >Lviv Polytechnic National University</strong
+                        >
+                        — Cybersecurity
+                    </li>
+                </ul>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="cv-section-title">Certificates</h2>
+                <ul class="cv-list">
+                    <li class="cv-list-item">
+                        <strong class="cv-strong">freeCodeCamp</strong> —
+                        JavaScript Algorithms and Data Structures (Certificate)
+                    </li>
+                    <li class="cv-list-item">
+                        <strong class="cv-strong">Udemy</strong> — JavaScript
+                        Complete Course (Certificate, 2025)
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </body>
 </html>
