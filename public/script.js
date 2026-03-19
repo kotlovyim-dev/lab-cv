@@ -7,6 +7,8 @@ const localStorageList = document.getElementById("localstorage-list");
 const feedbackModal = document.getElementById("feedback-modal");
 const feedbackBackdrop = document.getElementById("feedback-modal-backdrop");
 const themeToggle = document.getElementById("theme-toggle");
+const feedbackForm = document.getElementById("feedback-form");
+const feedbackStatus = document.getElementById("feedback-status");
 
 function getCurrentThemeByTime() {
     const hour = new Date().getHours();
@@ -174,11 +176,79 @@ function showFeedbackModalAfterDelay() {
     }, 60_000);
 }
 
+function setFeedbackStatus(text, state = "info") {
+    if (!feedbackStatus) {
+        return;
+    }
+
+    feedbackStatus.className = `cv-feedback-status cv-feedback-status-${state}`;
+    feedbackStatus.textContent = text;
+}
+
+function initFeedbackForm() {
+    if (!feedbackForm) {
+        return;
+    }
+
+    feedbackForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const submitButton = feedbackForm.querySelector(
+            'button[type="submit"]',
+        );
+        const formData = new FormData(feedbackForm);
+        const payload = {
+            name: String(formData.get("name") || "").trim(),
+            email: String(formData.get("email") || "").trim(),
+            subject: String(formData.get("subject") || "").trim(),
+            message: String(formData.get("message") || "").trim(),
+        };
+
+        setFeedbackStatus("Sending message...", "info");
+
+        if (submitButton) {
+            submitButton.disabled = true;
+        }
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.ok) {
+                const serverError = Array.isArray(result.errors)
+                    ? result.errors.join(" ")
+                    : result.message || "Failed to send message.";
+                throw new Error(serverError);
+            }
+
+            setFeedbackStatus("Message sent successfully.", "success");
+            feedbackForm.reset();
+        } catch (error) {
+            setFeedbackStatus(
+                error.message || "Failed to send message.",
+                "error",
+            );
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+            }
+        }
+    });
+}
+
 function init() {
     initTheme();
     saveSystemInfoToLocalStorage();
     renderAllLocalStorage();
     loadEmployerComments();
+    initFeedbackForm();
     showFeedbackModalAfterDelay();
 }
 

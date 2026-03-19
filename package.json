@@ -1,0 +1,32 @@
+{
+    "name": "lab-cv",
+    "version": "1.0.0",
+    "description": "Lab 6: Hapi backend + contact form email + localtunnel",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js",
+        "tunnel": "lt --port 3000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kotlovyim-dev/lab-cv.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/kotlovyim-dev/lab-cv/issues"
+    },
+    "homepage": "https://github.com/kotlovyim-dev/lab-cv#readme",
+    "dependencies": {
+        "@hapi/hapi": "^21.4.7",
+        "@hapi/inert": "^7.1.0",
+        "dotenv": "^17.3.1",
+        "nodemailer": "^8.0.3"
+    },
+    "devDependencies": {
+        "localtunnel": "^2.0.2"
+    }
+}
