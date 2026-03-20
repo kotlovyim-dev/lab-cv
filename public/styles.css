@@ -76,7 +76,7 @@
 }
 
 .cv-name {
-    font-size: 8rem;
+    font-size: 3.2rem;
     margin: 0 0 5px;
     color: var(--primary-color);
     letter-spacing: -0.5px;
@@ -273,4 +273,27 @@
 
 .cv-button:hover {
     opacity: 0.92;
+}
+
+.cv-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cv-feedback-status {
+    margin: 6px 0 0;
+    min-height: 1.4em;
+    font-size: 0.92rem;
+}
+
+.cv-feedback-status-info {
+    color: var(--secondary-color);
+}
+
+.cv-feedback-status-success {
+    color: #16a34a;
+}
+
+.cv-feedback-status-error {
+    color: #dc2626;
 }

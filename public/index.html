@@ -233,11 +233,7 @@
             aria-labelledby="feedback-title"
         >
             <h2 class="cv-section-title" id="feedback-title">Feedback Form</h2>
-            <form
-                class="cv-feedback-form"
-                action="https://formspree.io/f/xqedvpoo"
-                method="POST"
-            >
+            <form class="cv-feedback-form" id="feedback-form" novalidate>
                 <label class="cv-field-label" for="feedback-name">Ім'я</label>
                 <input
                     class="cv-field-input"
@@ -256,14 +252,14 @@
                     required
                 />
 
-                <label class="cv-field-label" for="feedback-phone"
-                    >Номер телефону</label
+                <label class="cv-field-label" for="feedback-subject"
+                    >Тема повідомлення</label
                 >
                 <input
                     class="cv-field-input"
-                    id="feedback-phone"
-                    name="phone"
-                    type="tel"
+                    id="feedback-subject"
+                    name="subject"
+                    type="text"
                     required
                 />
 
@@ -278,6 +274,11 @@
                 ></textarea>
 
                 <button class="cv-button" type="submit">Відправити</button>
+                <p
+                    class="cv-feedback-status"
+                    id="feedback-status"
+                    aria-live="polite"
+                ></p>
             </form>
         </div>
 
